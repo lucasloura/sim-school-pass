@@ -2,7 +2,7 @@
     <head>
 		<title> :: Cartão SIM Escolar :: </title>
 		<link rel='stylesheet' type='text/css' href='./index.css'>
-        <!-- <link rel="icon" href="./icons/sim-site-logo.png"> -->
+        <!-- <link rel="icon" href="./logos/site.png"> -->
         <script src="./index.js"></script>
         <meta charset='utf-8'>
     </head>
@@ -22,14 +22,25 @@
             </div>
         </div>
 
+        <div id="sombra" style="display: none;">
+            <div id="area">
+                <h1> <b> REGULAMENTO - CARTÃO SIM ESCOLAR  </b> </h1>
+                <iframe id="regulamento" src="./regulamento/index.html"></iframe>
+                <a id="botaoFecharRegulamento" title="Fechar Regulamento" href="" onclick="alternarExibicaoRegulamento(); return false"> <div id="fechar"> FECHAR </div> </a>
+            </div>
+        </div>
+
         <div id="secaoInicial">
             <div id="intro">
                 <div id="info">
                     <h1> CARTÃO SIM ESCOLAR </h1> <hr> <br>
-                    Ambos cadastro e recadastro agora podem ser realizados pela internet! <br> <br> <br>
+                    Ambos cadastro e recadastro agora podem ser realizados pela internet! <br> <br>
+                    <div id="areaCpf">
+                        <h2> CPF: <input type="text" id="txtCpf" name="txtCpf" placeholder="000.000.000-00" maxlength="14" oninput="mascara(this)"> </h2>
+                    </div> <br>
                     <div id="botoesIntro">
-                        <a id="botaoRegulamento" title="Visualizar Regulamento" href="./paginas/regulamento.html" target="_blank"> <div id="regulamento"> REGULAMENTO </div> </a>
-                        <a id="botaoProsseguir" title="Prosseguir com o Cadastro/Recadastro" href=""> <div id="prosseguir"> PROSSEGUIR </div> </a>
+                        <a id="botaoRegulamento" title="Visualizar Regulamento" href="" onclick="alternarExibicaoRegulamento(); return false"> <div id="regulamento"> REGULAMENTO </div> </a>
+                        <a id="botaoProsseguir" title="Prosseguir com o Cadastro ou Recadastro" href="" onclick="logarCPF(); return false"> <div id="prosseguir"> PROSSEGUIR </div> </a>
                     </div>
                 </div>
             </div>
