@@ -105,10 +105,19 @@ body{
     padding: 10%;
 }
 
+#intro #info #areaCpf h2{
+    margin-bottom: 10px;
+}
+
 #intro #info #areaCpf #txtCpf{
     font-family: 'Tw Cen MT', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px;
     border: 0px solid hidden;
+}
+
+#intro #info #areaCpf #cpfInvalido{
+    margin-top: 0px;
+    color: red;
 }
 
 #intro #info #botoesIntro div{
@@ -134,6 +143,11 @@ body{
     color: black;
     background-color: yellow;
     margin-left: 5px;
+}
+
+#intro #info #botoesIntro #areaProsseguir{
+    margin: 0px;
+    padding-top: 5px;
 }
 
 #intro #info #botoesIntro #regulamento:hover{

@@ -36,11 +36,12 @@
                     <h1> CARTÃO SIM ESCOLAR </h1> <hr> <br>
                     Ambos cadastro e recadastro agora podem ser realizados pela internet! <br> <br>
                     <div id="areaCpf">
-                        <h2> CPF: <input type="text" id="txtCpf" name="txtCpf" placeholder="000.000.000-00" maxlength="14" oninput="mascara(this)"> </h2>
+                        <h2> CPF: <input type="text" id="txtCpf" name="txtCpf" placeholder="000.000.000-00" maxlength="14" oninput="mascara(this); return false"> </h2>
+                        <div id="cpfInvalido" style="color:white"> Insira um cpf válido! </div>
                     </div> <br>
                     <div id="botoesIntro">
                         <a id="botaoRegulamento" title="Visualizar Regulamento" href="" onclick="alternarExibicaoRegulamento(); return false"> <div id="regulamento"> REGULAMENTO </div> </a>
-                        <a id="botaoProsseguir" title="Prosseguir com o Cadastro ou Recadastro" href="" onclick="logarCPF(); return false"> <div id="prosseguir"> PROSSEGUIR </div> </a>
+                        <div id="areaProsseguir"> <a id="botaoProsseguir" title="Prosseguir com o Cadastro ou Recadastro" href="" onclick="logarCPF(); return false"> <div id="prosseguir"> PROSSEGUIR </div> </a> </div>
                     </div>
                 </div>
             </div>
