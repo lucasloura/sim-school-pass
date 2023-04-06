@@ -1,1 +1,140 @@
-cadastro
+<html>
+    <head>
+		<title> :: Cadastro Cartão SIM Escolar :: </title>
+		<link rel='stylesheet' type='text/css' href='./index.css'>
+        <!-- <link rel="icon" href="./logos/site.png"> -->
+        <script src="./index.js"></script>
+        <meta charset='utf-8'>
+    </head>
+    <body>
+
+        <div id="cabecalho">
+            <div id="links-empresas">
+                <a href="http://busfacilmaua.com.br/" target="_blank"> <img src="../logos/busfacil.png"> </a>
+                <a href="http://busfacilmaua.com.br/sim-vale-transporte/" target="_blank"> <img src="../logos/sim.png"> </a>
+                <a href="https://www.maua.sp.gov.br/" target="_blank"> <img src="../logos/prefeitura-maua.png"> </a>
+            </div>
+            <div id="usuario">
+                <div id="cpf"> <b>  </b> </div>
+                <a href="" onclick="alternarExibicaoSair(); return false"> <div id="sair"> SAIR > </div> </a>
+            </div>
+        </div>
+
+        <div id="sombra1" style="display: none;">
+            <div id="confirmacaoSair">
+                <h1> <b> SAIR  </b> <hr> </h1>
+                Realmente deseja sair? <br> <br>
+                As informações inseridas não serão salvas.
+                <a id="botaoCancelar" title="Cancelar Saida" href="" onclick="alternarExibicaoSair(); return false"> <div> CANCELAR </div> </a>
+                <a id="botaoConfirmar" title="Confirmar Saida" href="" onclick="sair(); return false"> <div> CONFIRMAR </div> </a>
+            </div>
+        </div>
+
+        <div id="sombra2" style="display: none;">
+            <div id="area">
+                <h1> <b> REGULAMENTO - CARTÃO SIM ESCOLAR  </b> </h1>
+                <iframe id="regulamento" src="../regulamento/index.html"></iframe>
+                <a id="botaoFecharRegulamento" title="Fechar Regulamento" href="" onclick="alternarExibicaoRegulamento(); return false"> <div id="fechar"> FECHAR </div> </a>
+            </div>
+        </div>
+
+        <div id="sombra3" style="display: none;">
+            <div id="area">
+                <h1> <b> CAMPOS INCOMPLETOS </b> </h1>
+                O cadastro não pôde ser concluido porque os seguintes campos ainda não foram preenchidos: <br> <br>
+                <div id="campos"></div>
+                <a id="botaoOK" href="" onclick="alternarExibicaoCamposIncompletos(); return false"> <div id="ok"> OK </div> </a>
+            </div>
+        </div>
+
+        <div id="sombra4" style="display: none;">
+            <div id="area">
+                <h1> <b> SUCESSO!  </b> <hr> </h1>
+                <b> Protocolo #000A-000000E </b> <br> <br>
+                Um email foi enviado a você contendo informações do seu cadastro, você poderá voltar aqui para acompanhar a situação do seu processo mais tarde. <br>
+                <a id="botaoOK" href="" onclick="alternarExibicaoCadastroRealizado(); return false"> <div id="ok"> OK </div> </a>
+            </div>
+        </div>
+
+        <div id="area">
+            <div id="conteudo">
+                <div id="info-intro">
+                    <h1> CADASTRO CARTÃO SIM ESCOLAR <hr> </h1>
+                    Parece que esse é seu primeiro cadastro, antes de continuar, vamos revisar alguns dos requisitos para ser eligível ao cartão:
+                    <div id="requisitos">
+                        <ul>
+                            <li> O estudante deve estar devidamente matrículado em uma <b> instituição de ensino reconhecida pelo MEC; </b> </li>
+                            <li> A <b> distância mínima </b> entre a residência do estudante e a instituição de ensino é de <b> 1,5Km </b> (um quilômetro e meio); </li>
+                            <li> ser legal </li>
+                            <li> nao torcer para o fluminense </li>
+                        </ul>
+                    </div>
+                    <br> Após revisar e se certificar de que todos os requisitos estão sendo atendidos, preencha os campos a seguir. <br> <br>
+                </div>
+
+                <div id="info-pessoal">
+                    <h1> INFORMAÇÕES PESSOAIS <hr> </h1> <br>
+                    <div id="campos">
+                        <div style="margin-bottom: 6px;"> Documento com Foto (RG ou CNH): </div> <input type="file" id="docFoto" name="docFoto" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"> <br> <br>
+                        Nome do(a) Estudante: <input type="text" id="txtNome" name="txtNome" maxlength="90"> <br>
+                        Nome da Mãe: <input type="text" id="txtNomeMae" name="txtNomeMae" maxlength="90"> <br>
+                        Nome do Pai: <input type="text" id="txtNomePai" name="txtNomePai" maxlength="90"> <br>
+                        Email: <input type="text" id="txtEmail" name="txtEmail" placeholder="usuario@dominio" maxlength="40"> <br>
+                        <div id="trio1"> CPF: <input type="text" id="txtCpf" name="txtCpf" placeholder="000.000.000-00" maxlength="14" oninput="mascaraCpf(this); return false"> </div>
+                        <div id="trio2"> RG: <input type="text" id="txtRg" name="txtRg" placeholder="00.000.000-0" maxlength="12" oninput="mascaraRg(this); return false"> </div>
+                        <div id="trio3"> Data de Nascimento: <input type="text" id="txtDataNasc" name="txtDataNasc" placeholder="00/00/0000" maxlength="10" oninput="mascaraData(this); return false"> </div> <br>
+                        <div id="trio1"> Nº Celular: <input type="text" id="txtNumCel" name="txtNumCel" placeholder="(00) 00000-0000" maxlength="15" oninput="mascaraNumCel(this); return false"> </div>
+                        <div id="trio2" style="width:40%;"> Sexo: <br> <input id="rdMasc" type="radio" name="sexo" value="masc"> Masculino
+                                                                       <input id="rdFemin" type="radio" name="sexo" value="femin"> Feminino
+                                                                       <input id="rdOutro" type="radio" name="sexo" value="outro"> Outro </div>
+                    </div> <br> 
+                </div>
+
+                <div id="info-endereco">
+                    <h1> ENDEREÇO PESSOAL <hr> </h1> <br>
+                    <div id="campos">
+                        <div style="margin-bottom: 6px;"> Comprovante de Residência (Conta de Luz, Água ou Telefone de no máximo 3 meses): </div> <input type="file" id="compRes" name="compRes" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"> <br> <br>
+                        <div id="trio1"> CEP: <input type="text" id="txtCep" name="txtCep" placeholder="00000-000" maxlength="9" oninput="mascaraCep(this); return false"> </div>
+                        <div id="trio2" style="width:62%;"> Endereço: <input type="text" id="txtEndereco" name="txtEndereco" maxlength="100"> </div> <br>
+                        <div id="trio1"> Bairro: <input type="text" id="txtBairro" name="txtBairro" maxlength="90"> </div>
+                        <div id="trio2"> Cidade: <input type="text" id="txtCidade" name="txtCidade" maxlength="90"> </div>
+                        <div id="trio3"> UF: <input type="text" id="txtUf" name="txtUf" maxlength="2"> </div> <br>
+                        <div id="trio1"> Número: <input type="text" id="txtNum" name="txtNum" maxlength="6" oninput="mascaraNum(this); return false"> </div>
+                        <div id="trio2"> Complemento: <input type="text" id="txtComp" name="txtComp"> </div>                    
+                    </div>
+                </div>
+
+                <div id="info-escola">
+                    <h1> INFORMAÇÕES DA INSTITUIÇÃO <hr> </h1> <br>
+                    <div id="campos">
+                        <div style="margin-bottom: 6px;"> Atestado Geral de Matrícula (inclui grade de horários e período letivo): </div> <input type="file" id="atesMatr" name="atesMatr" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"> <br> <br>
+                        Nome da instituição: <input type="text" id="txtNomeInst" name="txtNomeInst" maxlength="90"> <br>
+                        <div id="trio1"> CEP: <input type="text" id="txtCepInst" name="txtCepInst" placeholder="00000-000" maxlength="9" oninput="mascaraCep(this); return false"> </div>
+                        <div id="trio2" style="width:62%;"> Endereço: <input type="text" id="txtEnderecoInst" name="txtEnderecoInst" maxlength="100"> </div> <br>
+                        <div id="trio1"> Bairro: <input type="text" id="txtBairroInst" name="txtBairroInst" maxlength="90"> </div>
+                        <div id="trio2"> Cidade: <input type="text" id="txtCidadeInst" name="txtCidadeInst" maxlength="90"> </div>
+                        <div id="trio3"> UF: <input type="text" id="txtUfInst" name="txtUfInst" maxlength="2"> </div> <br>
+                        <div id="trio1"> Número: <input type="text" id="txtNumInst" name="txtNumInst" maxlength="6" oninput="mascaraNum(this); return false"> </div>
+                        <div id="trio2"> Complemento: <input type="text" id="txtCompInst" name="txtCompInst"> </div>      
+                    </div>
+                </div>
+
+                <div id="info-onibus">
+                    <h1> INFORMAÇÕES DE TRANSPORTE <hr> </h1> <br>
+                    <div id="campos">
+                        Linha(s) de ônibus utilizada(s): <br>
+                        <div id="trio1"> <input type="text" id="txtLinOnib1" name="txtLinOnib1" maxlength="90" placeholder="000 - " oninput="mascaraLinOnib(this); return false"> </div>
+                        <div id="trio2"> <input type="text" id="txtLinOnib2" name="txtLinOnib2" maxlength="90" placeholder="000 - " oninput="mascaraLinOnib(this); return false"> </div>
+                        <div id="trio3"> <input type="text" id="txtLinOnib3" name="txtLinOnib3" maxlength="90" placeholder="000 - " oninput="mascaraLinOnib(this); return false"> </div>
+                    </div>
+                </div>
+
+                <input type="checkbox" id="termosAceitos" name="termosAceitos"> Li e aceito os <a href="" onclick="alternarExibicaoRegulamento(); return false"> Termos de Uso.</a>
+                <div id="areaConfirmar">
+                    <a id="botaoConfirmar" title="Confirmar Cadastro" href="" onclick="checarCadastro(); return false"> <div id="confirmar"> CONFIRMAR </div> </a>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

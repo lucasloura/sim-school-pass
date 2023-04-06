@@ -1,0 +1,341 @@
+html{
+	scroll-behavior: smooth;	
+}
+
+body{
+	font-family: 'Tw Cen MT', Verdana, Geneva, Tahoma, sans-serif; 	
+	margin:0;
+    display: block;
+    background: url("../planos/amarelo.jpg");
+    background-size: 100% 100%;
+}
+
+
+
+#cabecalho{
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    display: block;
+    position: fixed;
+    border-bottom: 2px solid lightgray;
+}
+
+#links-empresas{
+    height: 30px;
+    padding-left: 35px;
+    float: left;
+    padding-top: 10px;
+}
+
+#links-empresas img{
+    height: 100%;
+    margin-right: 20px;
+}
+
+#links-empresas a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#usuario{
+    float: right;
+    padding-right: 35px;
+}
+
+#usuario a:link, a:visited, a:link:active, a:visited:active{
+    color: black;
+    text-decoration: none;   
+}
+
+#usuario div{
+    border: none;
+    margin-top: 2px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#usuario #sair:hover{
+    color: gray;
+}
+
+
+
+div[id*='sombra']{
+    height:100%;
+    width: 100%;
+    position: fixed;
+    background-color: #00000070;
+    display: none;
+}
+
+#sombra1 #confirmacaoSair{
+    width: 300px;
+    height: 240px;
+    margin: 15% auto;
+    margin-left: 38%;
+    padding: 13px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    position: fixed;
+}
+
+#sombra1 #confirmacaoSair div{
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#sombra1 #confirmacaoSair a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#sombra1 #confirmacaoSair div:hover{
+    color: gray;
+    border: 1px solid gray;
+}
+
+#sombra2 #area{
+    width: 640px;
+    height: 580px;
+    margin: 2% auto;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+}
+
+#sombra2 #area #regulamento{
+    background-color: white;
+    border: 2px solid black;
+    height: 73%;
+    width: 90%;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 10px;
+    display:flex;
+}
+
+#sombra2 #area #fechar{
+    text-align: center;
+    margin-top: 9px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-right: 5px;
+}
+
+#sombra2 #area #fechar a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#sombra2 #area #fechar:hover{
+    color: gray;
+    border: 1px solid gray;
+}
+
+#sombra3 #area{
+    width: 640px;
+    height: 580px;
+    margin: 2% auto;
+    padding: 10px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+}
+
+#sombra3 #area #campos{
+    background-color: white;
+    border: 2px solid black;
+    height: 65%;
+    width: 90%;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 10px;
+    display:flex;
+    overflow: scroll;
+    text-align: left;
+}
+
+#sombra3 #area #botaoOK{
+    text-align: center;
+    margin-top: 9px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-right: 5px;
+}
+
+#sombra3 #area #botaoOK a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#sombra3 #area #botaoOK:hover{
+    color: gray;
+    border: 1px solid gray;
+}
+
+#sombra4 #area{
+    width: 400px;
+    height: 270px;
+    margin: 13% auto;
+    margin-left: 35%;
+    padding: 13px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    position: fixed;
+}
+
+#sombra4 #area div{
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#sombra4 #area a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#sombra4 #area div:hover{
+    color: gray;
+    border: 1px solid gray;
+}
+
+
+
+#area{
+    padding: 5%;
+}
+
+#conteudo{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    display: block;
+}
+
+#conteudo div[id*='info']{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    display: block;
+    border: 2px solid lightgray;
+}
+
+#conteudo #requisitos{
+    border: 0px solid white;
+    padding: 0px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+#conteudo #campos{
+    text-align: left;
+    border: 0px solid white;
+    padding: 0px;
+}
+
+#conteudo #campos input[type=text]{
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Tw Cen MT', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+#conteudo #campos div[id*='trio']{
+    display: inline-block;
+    width: 25%;
+}
+
+#conteudo #campos #trio1{
+    float: left;
+}
+
+#conteudo #campos #trio2{
+    margin-left: 13%;
+}
+
+#conteudo #campos #trio3{
+    float: right;
+}
+
+
+
+#conteudo #areaConfirmar div{
+    text-align: center;
+    margin-top: 2px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#conteudo #areaConfirmar div{
+    border: 1px solid yellow;
+    color: black;
+    background-color: yellow;
+    margin: 20px;
+}
+
+#conteudo #areaConfirmar{
+    margin: 0px;
+    padding-top: 5px;
+}
+
+#conteudo #areaConfirmar div:hover{
+    border: 1px solid gray;
+}
+
+#conteudo #areaConfirmar a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
