@@ -31,9 +31,9 @@ function mascara(i){
         localStorage.setItem('cpf', JSON.stringify(x));
 
         if (x == "000.000.000-00")
-            window.open('https://lucasloura.github.io/sim-school-pass/recadastro/', '_self');
+            window.open('./recadastro/index.html', '_self');
         else 
-            window.open('https://lucasloura.github.io/sim-school-pass/cadastro/', '_self');
+            window.open('./cadastro/index.html', '_self');
     }
     else
         y.style.color = "red";

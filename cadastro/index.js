@@ -1,3 +1,38 @@
+function alternarExibicao(i){
+    var x = document.getElementById("sombra");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+        
+        if (i == 1)
+            document.getElementById("areaSair").style.display = "block";
+
+        if (i == 2)
+            document.getElementById("areaRegulamento").style.display = "block";
+
+        if (i == 3)
+            document.getElementById("areaCamposIncompletos").style.display = "block";
+
+        if (i == 4)
+            document.getElementById("areaSucesso").style.display = "block";
+
+    } else {
+        x.style.display = "none";
+
+        if (i == 1)
+            document.getElementById("areaSair").style.display = "none";
+
+        if (i == 2)
+            document.getElementById("areaRegulamento").style.display = "none";
+
+        if (i == 3)
+            document.getElementById("areaCamposIncompletos").style.display = "none";
+
+        if (i == 4)
+            document.getElementById("areaSucesso").style.display = "none";
+    }
+}
+
 function mascaraCpf(i){
     var v = i.value;
     
@@ -192,55 +227,80 @@ function checarCadastro(){
     if(!x) s.push('Termos de Uso');
 
     if (s.length == 0)
-        alternarExibicaoCadastroRealizado();
+        alternarExibicao(4);
     else{
-        alternarExibicaoCamposIncompletos();
+        alternarExibicao(3);
         s.forEach(campo => {
             document.getElementById("campos").innerHTML += " &#9679; &nbsp; " + campo + " <br>";
         });
     }
 }
 
-function alternarExibicaoSair(){
-    var x = document.getElementById("sombra1");
+function verifEmail(){
 
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+    if(!isEmail(document.getElementById("txtEmail").value))
+        document.getElementById("invEmail").style.color = "red";
+    else 
+        document.getElementById("invEmail").style.color = "white";
 }
 
-function alternarExibicaoRegulamento(){
-    var x = document.getElementById("sombra2");
+function verifCpf(i){
 
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+    if (i.value.length < 14)
+        document.getElementById("invCpf").style.color = "red";
+    else
+        document.getElementById("invCpf").style.color = "white";
 }
 
-function alternarExibicaoCamposIncompletos(){
-    var x = document.getElementById("sombra3");
-
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+function verifRg(i){
+    
+    if (i.value.length < 12)
+        document.getElementById("invRg").style.color = "red";
+    else
+        document.getElementById("invRg").style.color = "white";
 }
 
-function alternarExibicaoCadastroRealizado(){
-    var x = document.getElementById("sombra4");
+function verifData(i){
 
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
+    if (i.value.length < 10)
+        document.getElementById("invDataNasc").style.color = "red";
+    else
+        document.getElementById("invDataNasc").style.color = "white";
+}
+
+function verifNumCel(i){
+    
+    if (i.value.length < 15)
+        document.getElementById("invNumCel").style.color = "red";
+    else
+        document.getElementById("invNumCel").style.color = "white";
+}
+
+function verifCep(i){
+        
+    if (i.value.length < 9)
+        document.getElementById("invCep").style.color = "red";
+    else
+        document.getElementById("invCep").style.color = "white";
+}
+
+function verifCepInst(i){
+        
+    if (i.value.length < 9)
+        document.getElementById("invCepInst").style.color = "red";
+    else
+        document.getElementById("invCepInst").style.color = "white";
+}
+
+function isEmail(emailAdress){
+    let regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (emailAdress.match(regex)) 
+        return true; 
+    else
+        return false; 
 }
 
 function sair(){
-    window.open('https://lucasloura.github.io/sim-school-pass/', '_self');
+    window.open('../index.html', '_self');
 }

@@ -16,43 +16,37 @@
             </div>
             <div id="usuario">
                 <div id="cpf"> <b>  </b> </div>
-                <a href="" onclick="alternarExibicaoSair(); return false"> <div id="sair"> SAIR > </div> </a>
+                <a href="" onclick="alternarExibicao(1); return false"> <div id="sair"> <img src="../icones/sair-pt.png" onmouseover="this.src='../icones/sair-cz.png'" onmouseout="this.src='../icones/sair-pt.png'"> </div> </a>
             </div>
         </div>
 
-        <div id="sombra1" style="display: none;">
-            <div id="confirmacaoSair">
+        <div id="sombra" style="display: none";>
+            <div id="areaSair" style="display: none">
                 <h1> <b> SAIR  </b> <hr> </h1>
                 Realmente deseja sair? <br> <br>
                 As informações inseridas não serão salvas.
-                <a id="botaoCancelar" title="Cancelar Saida" href="" onclick="alternarExibicaoSair(); return false"> <div> CANCELAR </div> </a>
+                <a id="botaoCancelar" title="Cancelar Saida" href="" onclick="alternarExibicao(1); return false"> <div> CANCELAR </div> </a>
                 <a id="botaoConfirmar" title="Confirmar Saida" href="" onclick="sair(); return false"> <div> CONFIRMAR </div> </a>
             </div>
-        </div>
 
-        <div id="sombra2" style="display: none;">
-            <div id="area">
+            <div id="areaRegulamento" style="display: none">
                 <h1> <b> REGULAMENTO - CARTÃO SIM ESCOLAR  </b> </h1>
                 <iframe id="regulamento" src="../regulamento/index.html"></iframe>
-                <a id="botaoFecharRegulamento" title="Fechar Regulamento" href="" onclick="alternarExibicaoRegulamento(); return false"> <div id="fechar"> FECHAR </div> </a>
+                <a id="botaoFecharRegulamento" title="Fechar Regulamento" href="" onclick="alternarExibicao(2); return false"> <div id="fechar"> FECHAR </div> </a>
             </div>
-        </div>
 
-        <div id="sombra3" style="display: none;">
-            <div id="area">
+            <div id="areaCamposIncompletos" style="display: none">
                 <h1> <b> CAMPOS INCOMPLETOS </b> </h1>
                 O cadastro não pôde ser concluido porque os seguintes campos ainda não foram preenchidos: <br> <br>
                 <div id="campos"></div>
-                <a id="botaoOK" href="" onclick="alternarExibicaoCamposIncompletos(); return false"> <div id="ok"> OK </div> </a>
+                <a id="botaoOK" href="" onclick="alternarExibicao(3); return false"> <div id="ok"> OK </div> </a>
             </div>
-        </div>
 
-        <div id="sombra4" style="display: none;">
-            <div id="area">
+            <div id="areaSucesso" style="display: none">
                 <h1> <b> SUCESSO!  </b> <hr> </h1>
                 <b> Protocolo #000A-000000E </b> <br> <br>
                 Um email foi enviado a você contendo informações do seu cadastro, você poderá voltar aqui para acompanhar a situação do seu processo mais tarde. <br>
-                <a id="botaoOK" href="" onclick="alternarExibicaoCadastroRealizado(); return false"> <div id="ok"> OK </div> </a>
+                <a id="botaoOK" href="" onclick="alternarExibicao(4); return false"> <div id="ok"> OK </div> </a>
             </div>
         </div>
 
@@ -79,14 +73,38 @@
                         Nome do(a) Estudante: <input type="text" id="txtNome" name="txtNome" maxlength="90"> <br>
                         Nome da Mãe: <input type="text" id="txtNomeMae" name="txtNomeMae" maxlength="90"> <br>
                         Nome do Pai: <input type="text" id="txtNomePai" name="txtNomePai" maxlength="90"> <br>
-                        Email: <input type="text" id="txtEmail" name="txtEmail" placeholder="usuario@dominio" maxlength="40"> <br>
-                        <div id="trio1"> CPF: <input type="text" id="txtCpf" name="txtCpf" placeholder="000.000.000-00" maxlength="14" oninput="mascaraCpf(this); return false"> </div>
-                        <div id="trio2"> RG: <input type="text" id="txtRg" name="txtRg" placeholder="00.000.000-0" maxlength="12" oninput="mascaraRg(this); return false"> </div>
-                        <div id="trio3"> Data de Nascimento: <input type="text" id="txtDataNasc" name="txtDataNasc" placeholder="00/00/0000" maxlength="10" oninput="mascaraData(this); return false"> </div> <br>
-                        <div id="trio1"> Nº Celular: <input type="text" id="txtNumCel" name="txtNumCel" placeholder="(00) 00000-0000" maxlength="15" oninput="mascaraNumCel(this); return false"> </div>
+                        <div id="secaoEmail">
+                            Email: <input type="text" id="txtEmail" name="txtEmail" placeholder="usuario@dominio" maxlength="60" onblur="verifEmail(); return false">
+                            <div id="invEmail"> Insira um email válido! </div>
+                        </div>
+                        <div id="trio1">
+                            <div id="secaoCpf">
+                                CPF: <input type="text" id="txtCpf" name="txtCpf" placeholder="000.000.000-00" maxlength="14" oninput="mascaraCpf(this); return false" onblur="verifCpf(this); return false">
+                                <div id="invCpf"> Insira um CPF válido! </div>
+                            </div>
+                        </div>
+                        <div id="trio2">
+                            <div id="secaoRg">
+                                RG: <input type="text" id="txtRg" name="txtRg" placeholder="00.000.000-0" maxlength="12" oninput="mascaraRg(this); return false" onblur="verifRg(this); return false">
+                                <div id="invRg"> Insira um RG válido! </div>
+                            </div>
+                        </div>
+                        <div id="trio3">
+                            <div id="secaoDataNasc">
+                                Data de Nascimento: <input type="text" id="txtDataNasc" name="txtDataNasc" placeholder="00/00/0000" maxlength="10" oninput="mascaraData(this); return false" onblur="verifData(this); return false">
+                                <div id="invDataNasc"> Insira uma data de nascimento válida! </div>
+                            </div>
+                        </div> <br>
+                        <div id="trio1">
+                            <div id="secaoNumCel">
+                                Nº Celular: <input type="text" id="txtNumCel" name="txtNumCel" placeholder="(00) 00000-0000" maxlength="15" oninput="mascaraNumCel(this); return false" onblur="verifNumCel(this); return false">
+                                <div id="invNumCel"> Insira um N° de Celular válido! </div>
+                            </div>
+                        </div>
                         <div id="trio2" style="width:40%;"> Sexo: <br> <input id="rdMasc" type="radio" name="sexo" value="masc"> Masculino
                                                                        <input id="rdFemin" type="radio" name="sexo" value="femin"> Feminino
-                                                                       <input id="rdOutro" type="radio" name="sexo" value="outro"> Outro </div>
+                                                                       <input id="rdOutro" type="radio" name="sexo" value="outro"> Outro
+                        </div>
                     </div> <br> 
                 </div>
 
@@ -94,7 +112,12 @@
                     <h1> ENDEREÇO PESSOAL <hr> </h1> <br>
                     <div id="campos">
                         <div style="margin-bottom: 6px;"> Comprovante de Residência (Conta de Luz, Água ou Telefone de no máximo 3 meses): </div> <input type="file" id="compRes" name="compRes" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"> <br> <br>
-                        <div id="trio1"> CEP: <input type="text" id="txtCep" name="txtCep" placeholder="00000-000" maxlength="9" oninput="mascaraCep(this); return false"> </div>
+                        <div id="trio1">
+                            <div id="secaoCep">
+                                CEP: <input type="text" id="txtCep" name="txtCep" placeholder="00000-000" maxlength="9" oninput="mascaraCep(this); return false" onblur="verifCep(this); return false">
+                                <div id="invCep"> Insira um CEP válido! </div>
+                            </div>
+                        </div>
                         <div id="trio2" style="width:62%;"> Endereço: <input type="text" id="txtEndereco" name="txtEndereco" maxlength="100"> </div> <br>
                         <div id="trio1"> Bairro: <input type="text" id="txtBairro" name="txtBairro" maxlength="90"> </div>
                         <div id="trio2"> Cidade: <input type="text" id="txtCidade" name="txtCidade" maxlength="90"> </div>
@@ -109,7 +132,12 @@
                     <div id="campos">
                         <div style="margin-bottom: 6px;"> Atestado Geral de Matrícula (inclui grade de horários e período letivo): </div> <input type="file" id="atesMatr" name="atesMatr" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"> <br> <br>
                         Nome da instituição: <input type="text" id="txtNomeInst" name="txtNomeInst" maxlength="90"> <br>
-                        <div id="trio1"> CEP: <input type="text" id="txtCepInst" name="txtCepInst" placeholder="00000-000" maxlength="9" oninput="mascaraCep(this); return false"> </div>
+                        <div id="trio1">
+                            <div id="secaoCep">
+                                CEP: <input type="text" id="txtCepInst" name="txtCepInst" placeholder="00000-000" maxlength="9" oninput="mascaraCep(this); return false" onblur="verifCepInst(this); return false">
+                                <div id="invCepInst"> Insira um CEP válido! </div>
+                            </div>
+                        </div>
                         <div id="trio2" style="width:62%;"> Endereço: <input type="text" id="txtEnderecoInst" name="txtEnderecoInst" maxlength="100"> </div> <br>
                         <div id="trio1"> Bairro: <input type="text" id="txtBairroInst" name="txtBairroInst" maxlength="90"> </div>
                         <div id="trio2"> Cidade: <input type="text" id="txtCidadeInst" name="txtCidadeInst" maxlength="90"> </div>
@@ -122,14 +150,14 @@
                 <div id="info-onibus">
                     <h1> INFORMAÇÕES DE TRANSPORTE <hr> </h1> <br>
                     <div id="campos">
-                        Linha(s) de ônibus utilizada(s): <br>
+                        Linha(s) de ônibus utilizada(s): <br> <br>
                         <div id="trio1"> <input type="text" id="txtLinOnib1" name="txtLinOnib1" maxlength="90" placeholder="000 - " oninput="mascaraLinOnib(this); return false"> </div>
                         <div id="trio2"> <input type="text" id="txtLinOnib2" name="txtLinOnib2" maxlength="90" placeholder="000 - " oninput="mascaraLinOnib(this); return false"> </div>
                         <div id="trio3"> <input type="text" id="txtLinOnib3" name="txtLinOnib3" maxlength="90" placeholder="000 - " oninput="mascaraLinOnib(this); return false"> </div>
                     </div>
                 </div>
 
-                <input type="checkbox" id="termosAceitos" name="termosAceitos"> Li e aceito os <a href="" onclick="alternarExibicaoRegulamento(); return false"> Termos de Uso.</a>
+                <input type="checkbox" id="termosAceitos" name="termosAceitos"> Li e aceito os <a href="" onclick="alternarExibicao(2); return false"> Termos de Uso.</a>
                 <div id="areaConfirmar">
                     <a id="botaoConfirmar" title="Confirmar Cadastro" href="" onclick="checarCadastro(); return false"> <div id="confirmar"> CONFIRMAR </div> </a>
                 </div>

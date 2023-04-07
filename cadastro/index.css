@@ -6,8 +6,8 @@ body{
 	font-family: 'Tw Cen MT', Verdana, Geneva, Tahoma, sans-serif; 	
 	margin:0;
     display: block;
-    background: url("../planos/amarelo.jpg");
-    background-size: 100% 100%;
+    background: url("../planos/amarelo1.jpg");
+    background-size: auto 100%;
 }
 
 
@@ -48,15 +48,18 @@ body{
 }
 
 #usuario div{
-    border: none;
     margin-top: 2px;
     padding-top: 15px;
     padding-bottom: 12px;
     padding-left: 7px;
     padding-right: 7px;
     display: inline-block;
-    border: 1px solid white;
     border-radius: 5px;
+    margin: 0 auto;
+}
+
+#usuario div img{
+    height: 20px;
 }
 
 #usuario #sair:hover{
@@ -65,7 +68,7 @@ body{
 
 
 
-div[id*='sombra']{
+#sombra{
     height:100%;
     width: 100%;
     position: fixed;
@@ -73,7 +76,7 @@ div[id*='sombra']{
     display: none;
 }
 
-#sombra1 #confirmacaoSair{
+#sombra #areaSair{
     width: 300px;
     height: 240px;
     margin: 15% auto;
@@ -83,9 +86,10 @@ div[id*='sombra']{
     text-align: center;
     border-radius: 35px;
     position: fixed;
+    display: none;
 }
 
-#sombra1 #confirmacaoSair div{
+#sombra #areaSair div{
     text-align: center;
     margin-top: 25px;
     padding-top: 15px;
@@ -101,16 +105,16 @@ div[id*='sombra']{
     margin-left: 10px;
 }
 
-#sombra1 #confirmacaoSair a:link, a:visited, a:link:active, a:visited:active{
+#sombra #areaSair a:link, a:visited, a:link:active, a:visited:active{
     text-decoration: none;
 }
 
-#sombra1 #confirmacaoSair div:hover{
+#sombra #areaSair div:hover{
     color: gray;
     border: 1px solid gray;
 }
 
-#sombra2 #area{
+#sombra #areaRegulamento{
     width: 640px;
     height: 580px;
     margin: 2% auto;
@@ -118,9 +122,10 @@ div[id*='sombra']{
     background-color: white;
     text-align: center;
     border-radius: 35px;
+    display: none;
 }
 
-#sombra2 #area #regulamento{
+#sombra #areaRegulamento #regulamento{
     background-color: white;
     border: 2px solid black;
     height: 73%;
@@ -131,7 +136,7 @@ div[id*='sombra']{
     display:flex;
 }
 
-#sombra2 #area #fechar{
+#sombra #areaRegulamento #fechar{
     text-align: center;
     margin-top: 9px;
     padding-top: 15px;
@@ -146,16 +151,16 @@ div[id*='sombra']{
     margin-right: 5px;
 }
 
-#sombra2 #area #fechar a:link, a:visited, a:link:active, a:visited:active{
+#sombra #areaRegulamento #fechar a:link, a:visited, a:link:active, a:visited:active{
     text-decoration: none;
 }
 
-#sombra2 #area #fechar:hover{
+#sombra #areaRegulamento #fechar:hover{
     color: gray;
     border: 1px solid gray;
 }
 
-#sombra3 #area{
+#sombra #areaCamposIncompletos{
     width: 640px;
     height: 580px;
     margin: 2% auto;
@@ -163,9 +168,10 @@ div[id*='sombra']{
     background-color: white;
     text-align: center;
     border-radius: 35px;
+    display: none;
 }
 
-#sombra3 #area #campos{
+#sombra #areaCamposIncompletos #campos{
     background-color: white;
     border: 2px solid black;
     height: 65%;
@@ -178,7 +184,7 @@ div[id*='sombra']{
     text-align: left;
 }
 
-#sombra3 #area #botaoOK{
+#sombra #areaCamposIncompletos #botaoOK{
     text-align: center;
     margin-top: 9px;
     padding-top: 15px;
@@ -193,16 +199,16 @@ div[id*='sombra']{
     margin-right: 5px;
 }
 
-#sombra3 #area #botaoOK a:link, a:visited, a:link:active, a:visited:active{
+#sombra #areaCamposIncompletos #botaoOK a:link, a:visited, a:link:active, a:visited:active{
     text-decoration: none;
 }
 
-#sombra3 #area #botaoOK:hover{
+#sombra #areaCamposIncompletos #botaoOK:hover{
     color: gray;
     border: 1px solid gray;
 }
 
-#sombra4 #area{
+#sombra #areaSucesso{
     width: 400px;
     height: 270px;
     margin: 13% auto;
@@ -212,9 +218,10 @@ div[id*='sombra']{
     text-align: center;
     border-radius: 35px;
     position: fixed;
+    display: none;
 }
 
-#sombra4 #area div{
+#sombra #areaSucesso div{
     text-align: center;
     margin-top: 25px;
     padding-top: 15px;
@@ -230,11 +237,11 @@ div[id*='sombra']{
     margin-left: 10px;
 }
 
-#sombra4 #area a:link, a:visited, a:link:active, a:visited:active{
+#sombra #areaSucesso a:link, a:visited, a:link:active, a:visited:active{
     text-decoration: none;
 }
 
-#sombra4 #area div:hover{
+#sombra #areaSucesso div:hover{
     color: gray;
     border: 1px solid gray;
 }
@@ -250,6 +257,7 @@ div[id*='sombra']{
     height: auto;
     margin: 0 auto;
     padding: 25px;
+    padding-top: 40px;
     background-color: white;
     text-align: center;
     border-radius: 35px;
@@ -261,7 +269,7 @@ div[id*='sombra']{
     height: auto;
     margin: 0 auto;
     margin-bottom: 25px;
-    padding: 20px;
+    padding: 25px;
     background-color: white;
     text-align: center;
     border-radius: 35px;
@@ -288,6 +296,19 @@ div[id*='sombra']{
     margin-bottom: 20px;
     font-family: 'Tw Cen MT', Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
+}
+
+#conteudo #campos div[id*='secao'] input[type=text]{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+#conteudo #campos div[id*='secao'] div[id*='inv']{
+    width: 100%;
+    font-size: 15px;
+    color: white;
+    user-select: none;
+    margin-bottom: 4px;
 }
 
 #conteudo #campos div[id*='trio']{
