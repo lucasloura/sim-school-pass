@@ -14,60 +14,69 @@
                 <a href="http://busfacilmaua.com.br/sim-vale-transporte/" target="_blank"> <img src="../logos/sim.png"> </a>
                 <a href="https://www.maua.sp.gov.br/" target="_blank"> <img src="../logos/prefeitura-maua.png"> </a>
             </div>
+
             <div id="usuario">
                 <div id="cpf"> <b>  </b> </div>
-                <a href="" onclick="alternarExibicao(1); return false"> <div id="sair"> <img src="../icones/sair-pt.png" onmouseover="this.src='../icones/sair-cz.png'" onmouseout="this.src='../icones/sair-pt.png'"> </div> </a>
+                <a href="" onclick="alternarExibicao(2); return false"> <div id="sair"> <img src="../icones/sair-pt.png" onmouseover="this.src='../icones/sair-cz.png'" onmouseout="this.src='../icones/sair-pt.png'"> </div> </a>
             </div>
         </div>
 
-        <div id="sombra" style="display: none";>
+        <div id="sombra" style="display: block">
+            <div id="areaIntro" style="display: block">
+                <h1> CADASTRO CARTÃO SIM ESCOLAR <hr> </h1>
+                Parece que essa é a sua primeira vez se cadastrando, antes de prosseguir, vamos revisar alguns dos requisitos para ser eligível à utilização do cartão:
+                <div id="requisitos">
+                    <ul>
+                        <li> O estudante deve estar devidamente matrículado em uma <b> instituição de ensino reconhecida pelo MEC </b> </li>
+                        <li> A <b> distância mínima </b> entre a residência do estudante e a instituição de ensino é <b> 1,5Km </b> (um quilômetro e meio) </li>
+                    </ul>
+                </div>
+                <br> Certificando-se de que os requisitos acima atendidos, preencha os campos a seguir. <br> <br> 
+                <a id="botaoOK" href="" onclick="alternarExibicao(1); return false"> <div id="ok"> OK </div> </a>
+            </div>
+
             <div id="areaSair" style="display: none">
                 <h1> <b> SAIR  </b> <hr> </h1>
                 Realmente deseja sair? <br> <br>
                 As informações inseridas não serão salvas.
-                <a id="botaoCancelar" title="Cancelar Saida" href="" onclick="alternarExibicao(1); return false"> <div> CANCELAR </div> </a>
+                <a id="botaoCancelar" title="Cancelar Saida" href="" onclick="alternarExibicao(2); return false"> <div> CANCELAR </div> </a>
                 <a id="botaoConfirmar" title="Confirmar Saida" href="" onclick="sair(); return false"> <div> CONFIRMAR </div> </a>
             </div>
 
             <div id="areaRegulamento" style="display: none">
                 <h1> <b> REGULAMENTO - CARTÃO SIM ESCOLAR  </b> </h1>
                 <iframe id="regulamento" src="../regulamento/index.html"></iframe>
-                <a id="botaoFecharRegulamento" title="Fechar Regulamento" href="" onclick="alternarExibicao(2); return false"> <div id="fechar"> FECHAR </div> </a>
+                <a id="botaoFecharRegulamento" title="Fechar Regulamento" href="" onclick="alternarExibicao(3); return false"> <div id="fechar"> FECHAR </div> </a>
             </div>
 
             <div id="areaCamposIncompletos" style="display: none">
                 <h1> <b> CAMPOS INCOMPLETOS </b> </h1>
                 O cadastro não pôde ser concluido porque os seguintes campos ainda não foram preenchidos: <br> <br>
                 <div id="campos"></div>
-                <a id="botaoOK" href="" onclick="alternarExibicao(3); return false"> <div id="ok"> OK </div> </a>
+                <a id="botaoOK" href="" onclick="alternarExibicao(4); return false"> <div id="ok"> OK </div> </a>
             </div>
 
             <div id="areaSucesso" style="display: none">
                 <h1> <b> SUCESSO!  </b> <hr> </h1>
                 <b> Protocolo #000A-000000E </b> <br> <br>
                 Um email foi enviado a você contendo informações do seu cadastro, você poderá voltar aqui para acompanhar a situação do seu processo mais tarde. <br>
-                <a id="botaoOK" href="" onclick="alternarExibicao(4); return false"> <div id="ok"> OK </div> </a>
+                <a id="botaoOK" href="" onclick="alternarExibicao(5); return false"> <div id="ok"> OK </div> </a>
             </div>
         </div>
 
         <div id="area">
             <div id="conteudo">
-                <div id="info-intro">
-                    <h1> CADASTRO CARTÃO SIM ESCOLAR <hr> </h1>
-                    Parece que essa é a sua primeira vez se cadastrando, antes de prosseguir, vamos revisar alguns dos requisitos para ser eligível à utilização do cartão:
-                    <div id="requisitos">
-                        <ul>
-                            <li> O estudante deve estar devidamente matrículado em uma <b> instituição de ensino reconhecida pelo MEC </b> </li>
-                            <li> A <b> distância mínima </b> entre a residência do estudante e a instituição de ensino é <b> 1,5Km </b> (um quilômetro e meio) </li>
-                        </ul>
-                    </div>
-                    <br> Certificando-se de que os requisitos acima atendidos, preencha os campos a seguir: <br> <br>
+                <div id="AreaAutoPreencher">
+                    <a id="botaoAutoPreencher" href="" onclick="autoPreencher(); return false"> <div id="autoPreencher"> AUTO PREENCHER </div> </a>
                 </div>
 
                 <div id="info-pessoal">
                     <h1> INFORMAÇÕES PESSOAIS <hr> </h1> <br>
                     <div id="campos">
-                        <div style="margin-bottom: 6px;"> Documento com Foto (RG ou CNH): </div> <input type="file" id="docFoto" name="docFoto" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"> <br> <br>
+                        <div id="trio1" style="width: 100%;">
+                            <div style="margin-bottom: 6px;"> Documento com Foto (RG ou CNH): </div>
+                            <input type="file" id="docFoto" name="docFoto" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"> <br> <br>
+                        </div>
                         Nome do(a) Estudante: <input type="text" id="txtNome" name="txtNome" maxlength="90"> <br>
                         Nome da Mãe: <input type="text" id="txtNomeMae" name="txtNomeMae" maxlength="90"> <br>
                         Nome do Pai: <input type="text" id="txtNomePai" name="txtNomePai" maxlength="90"> <br>
@@ -119,7 +128,7 @@
                         <div id="trio2" style="width:62%;"> Endereço: <input type="text" id="txtEndereco" name="txtEndereco" maxlength="100"> </div> <br>
                         <div id="trio1"> Bairro: <input type="text" id="txtBairro" name="txtBairro" maxlength="90"> </div>
                         <div id="trio2"> Cidade: <input type="text" id="txtCidade" name="txtCidade" maxlength="90"> </div>
-                        <div id="trio3"> UF: <input type="text" id="txtUf" name="txtUf" maxlength="2"> </div> <br>
+                        <div id="trio3"> UF: <input type="text" id="txtUf" name="txtUf" maxlength="2" oninput="mascaraUf(this); return false"> </div> <br>
                         <div id="trio1"> Número: <input type="text" id="txtNum" name="txtNum" maxlength="6" oninput="mascaraNum(this); return false"> </div>
                         <div id="trio2"> Complemento: <input type="text" id="txtComp" name="txtComp"> </div>                    
                     </div>
@@ -139,7 +148,7 @@
                         <div id="trio2" style="width:62%;"> Endereço: <input type="text" id="txtEnderecoInst" name="txtEnderecoInst" maxlength="100"> </div> <br>
                         <div id="trio1"> Bairro: <input type="text" id="txtBairroInst" name="txtBairroInst" maxlength="90"> </div>
                         <div id="trio2"> Cidade: <input type="text" id="txtCidadeInst" name="txtCidadeInst" maxlength="90"> </div>
-                        <div id="trio3"> UF: <input type="text" id="txtUfInst" name="txtUfInst" maxlength="2"> </div> <br>
+                        <div id="trio3"> UF: <input type="text" id="txtUfInst" name="txtUfInst" maxlength="2" oninput="mascaraUf(this); return false"> </div> <br>
                         <div id="trio1"> Número: <input type="text" id="txtNumInst" name="txtNumInst" maxlength="6" oninput="mascaraNum(this); return false"> </div>
                         <div id="trio2"> Complemento: <input type="text" id="txtCompInst" name="txtCompInst"> </div>      
                     </div>
@@ -155,12 +164,19 @@
                     </div>
                 </div>
 
-                <input type="checkbox" id="termosAceitos" name="termosAceitos"> Li e aceito os <a href="" onclick="alternarExibicao(2); return false"> Termos de Uso.</a>
+                <input type="checkbox" id="termosAceitos" name="termosAceitos"> Li e aceito os <a href="" onclick="alternarExibicao(3); return false"> Termos de Uso.</a>
                 <div id="areaConfirmar">
                     <a id="botaoConfirmar" title="Confirmar Cadastro" href="" onclick="checarCadastro(); return false"> <div id="confirmar"> CONFIRMAR </div> </a>
                 </div>
             </div>
-        </div>
 
+            <div id="areaImg">
+                <div id="creditImg">
+                    <a href="https://www.freepik.com/free-vector/modern-stripes-orange-line-pattern-background_7216742.htm#&position=49&from_view=author" title="Imagem Original: Harryarts / Freepik" target="_blank">
+                        <img src="../logos/freepik.png">
+                    </a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

@@ -52,7 +52,6 @@ body{
     padding-left: 7px;
     padding-right: 7px;
     display: inline-block;
-    border: 1px solid white;
     border-radius: 5px;
 }
 
@@ -67,7 +66,7 @@ body{
 }
 
 #cartoes #escolar:hover{
-    border: 1px solid lightgray;
+    color: gray;
 }
 
 #cartoes #valetransporte:hover{
@@ -156,7 +155,7 @@ body{
 }
 
 #intro #info #botoesIntro #prosseguir:hover{
-    border: 1px solid gray;
+    color:gray;
 }
 
 #intro #info #botoesIntro a:link, a:visited, a:link:active, a:visited:active{
@@ -214,4 +213,15 @@ body{
 #sombra #area #fechar:hover{
     color: gray;
     border: 1px solid gray;
+}
+
+#creditImg{
+    position: absolute;
+    bottom: 10px;
+    right: 10;
+    height: 75px;
+}
+
+#creditImg img{
+    height: 100%;
 }

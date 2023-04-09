@@ -76,12 +76,57 @@ body{
     display: none;
 }
 
+#sombra #areaIntro{
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 40px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    display: block;
+    border: 2px solid lightgray;
+}
+
+#sombra #areaIntro #requisitos{
+    border: 0px solid white;
+    padding: 0px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+#sombra #areaIntro #botaoOK{
+    text-align: center;
+    margin-top: 9px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-right: 5px;
+}
+
+#sombra #areaIntro #botaoOK a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#sombra #areaIntro #botaoOK:hover{
+    color: gray;
+    border: 1px solid gray;
+}
+
 #sombra #areaSair{
     width: 300px;
     height: 240px;
-    margin: 15% auto;
+    margin-top: 15%;
     margin-left: 38%;
-    padding: 13px;
+    padding: 25px;
     background-color: white;
     text-align: center;
     border-radius: 35px;
@@ -118,7 +163,7 @@ body{
     width: 640px;
     height: 580px;
     margin: 2% auto;
-    padding: 10px;
+    padding: 25px;
     background-color: white;
     text-align: center;
     border-radius: 35px;
@@ -138,7 +183,7 @@ body{
 
 #sombra #areaRegulamento #fechar{
     text-align: center;
-    margin-top: 9px;
+    margin-top: 15px;
     padding-top: 15px;
     padding-bottom: 12px;
     padding-left: 7px;
@@ -164,7 +209,7 @@ body{
     width: 640px;
     height: 580px;
     margin: 2% auto;
-    padding: 10px;
+    padding: 25;
     background-color: white;
     text-align: center;
     border-radius: 35px;
@@ -186,7 +231,7 @@ body{
 
 #sombra #areaCamposIncompletos #botaoOK{
     text-align: center;
-    margin-top: 9px;
+    margin-top: 15px;
     padding-top: 15px;
     padding-bottom: 12px;
     padding-left: 19px;
@@ -211,13 +256,12 @@ body{
 #sombra #areaSucesso{
     width: 400px;
     height: 270px;
-    margin: 13% auto;
+    margin-top: 13%;
     margin-left: 35%;
-    padding: 13px;
+    padding: 25px;
     background-color: white;
     text-align: center;
     border-radius: 35px;
-    position: fixed;
     display: none;
 }
 
@@ -249,7 +293,7 @@ body{
 
 
 #area{
-    padding: 5%;
+    padding-top: 7%;
 }
 
 #conteudo{
@@ -275,14 +319,6 @@ body{
     border-radius: 35px;
     display: block;
     border: 2px solid lightgray;
-}
-
-#conteudo #requisitos{
-    border: 0px solid white;
-    padding: 0px;
-    text-align: left;
-    width: 100%;
-    margin-bottom: auto;
 }
 
 #conteudo #campos{
@@ -354,9 +390,23 @@ body{
 }
 
 #conteudo #areaConfirmar div:hover{
-    border: 1px solid gray;
+    color: rgb(64, 64, 64);
 }
 
 #conteudo #areaConfirmar a:link, a:visited, a:link:active, a:visited:active{
     text-decoration: none;
+}
+
+#areaImg{
+    width: 100%;
+}
+
+#creditImg{
+    height: 50px;
+    margin: 15px;
+    float: right;
+}
+
+#creditImg img{
+    height: 100%;
 }

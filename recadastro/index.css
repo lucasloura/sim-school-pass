@@ -1,0 +1,412 @@
+html{
+	scroll-behavior: smooth;	
+}
+
+body{
+	font-family: 'Tw Cen MT', Verdana, Geneva, Tahoma, sans-serif; 	
+	margin:0;
+    display: block;
+    background: url("../planos/amarelo2.jpg");
+    background-size: auto 100%;
+}
+
+
+
+#cabecalho{
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    display: block;
+    position: fixed;
+    border-bottom: 2px solid lightgray;
+}
+
+#links-empresas{
+    height: 30px;
+    padding-left: 35px;
+    float: left;
+    padding-top: 10px;
+}
+
+#links-empresas img{
+    height: 100%;
+    margin-right: 20px;
+}
+
+#links-empresas a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#usuario{
+    float: right;
+    padding-right: 35px;
+}
+
+#usuario a:link, a:visited, a:link:active, a:visited:active{
+    color: black;
+    text-decoration: none;   
+}
+
+#usuario div{
+    margin-top: 2px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+#usuario div img{
+    height: 20px;
+}
+
+#usuario #sair:hover{
+    color: gray;
+}
+
+
+
+#sombra{
+    height:100%;
+    width: 100%;
+    position: fixed;
+    background-color: #00000070;
+    display: none;
+}
+
+#sombra #areaIntro{
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 40px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    display: block;
+    border: 2px solid lightgray;
+}
+
+#sombra #areaIntro #requisitos{
+    border: 0px solid white;
+    padding: 0px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+#sombra #areaIntro #botaoOK{
+    text-align: center;
+    margin-top: 9px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-right: 5px;
+}
+
+#sombra #areaIntro #botaoOK a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#sombra #areaIntro #botaoOK:hover{
+    color: gray;
+    border: 1px solid gray;
+}
+
+#sombra #areaSair{
+    width: 300px;
+    height: 240px;
+    margin-top: 15%;
+    margin-left: 38%;
+    padding: 25px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    position: fixed;
+    display: none;
+}
+
+#sombra #areaSair div{
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#sombra #areaSair a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#sombra #areaSair div:hover{
+    color: gray;
+    border: 1px solid gray;
+}
+
+#sombra #areaRegulamento{
+    width: 640px;
+    height: 580px;
+    margin: 2% auto;
+    padding: 25px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    display: none;
+}
+
+#sombra #areaRegulamento #regulamento{
+    background-color: white;
+    border: 2px solid black;
+    height: 73%;
+    width: 90%;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 10px;
+    display:flex;
+}
+
+#sombra #areaRegulamento #fechar{
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-right: 5px;
+}
+
+#sombra #areaRegulamento #fechar a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#sombra #areaRegulamento #fechar:hover{
+    color: gray;
+    border: 1px solid gray;
+}
+
+#sombra #areaCamposIncompletos{
+    width: 640px;
+    height: 580px;
+    margin: 2% auto;
+    padding: 25;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    display: none;
+}
+
+#sombra #areaCamposIncompletos #campos{
+    background-color: white;
+    border: 2px solid black;
+    height: 65%;
+    width: 90%;
+    border-radius: 25px;
+    margin: 0 auto;
+    padding: 10px;
+    display:flex;
+    overflow: scroll;
+    text-align: left;
+}
+
+#sombra #areaCamposIncompletos #botaoOK{
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-right: 5px;
+}
+
+#sombra #areaCamposIncompletos #botaoOK a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#sombra #areaCamposIncompletos #botaoOK:hover{
+    color: gray;
+    border: 1px solid gray;
+}
+
+#sombra #areaSucesso{
+    width: 400px;
+    height: 270px;
+    margin-top: 13%;
+    margin-left: 35%;
+    padding: 25px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    display: none;
+}
+
+#sombra #areaSucesso div{
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    display: inline-block;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#sombra #areaSucesso a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#sombra #areaSucesso div:hover{
+    color: gray;
+    border: 1px solid gray;
+}
+
+
+
+#area{
+    padding-top: 7%;
+}
+
+#conteudo{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 25px;
+    padding-top: 40px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    display: block;
+}
+
+#conteudo div[id*='info']{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: white;
+    text-align: center;
+    border-radius: 35px;
+    display: block;
+    border: 2px solid lightgray;
+}
+
+#conteudo #campos{
+    text-align: left;
+    border: 0px solid white;
+    padding: 0px;
+}
+
+#conteudo #campos input[type=text]{
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: 'Tw Cen MT', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+#conteudo #campos div[id*='secao'] input[type=text]{
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+#conteudo #campos div[id*='secao'] div[id*='inv']{
+    width: 100%;
+    font-size: 15px;
+    color: white;
+    user-select: none;
+    margin-bottom: 4px;
+}
+
+#conteudo #campos div[id*='trio']{
+    display: inline-block;
+    width: 25%;
+}
+
+#conteudo #campos #trio1{
+    float: left;
+}
+
+#conteudo #campos #trio2{
+    margin-left: 13%;
+}
+
+#conteudo #campos #trio3{
+    float: right;
+}
+
+
+
+#conteudo #areaConfirmar div{
+    text-align: center;
+    margin-top: 2px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+#conteudo #areaConfirmar div{
+    border: 1px solid yellow;
+    color: black;
+    background-color: yellow;
+    margin: 20px;
+}
+
+#conteudo #areaConfirmar{
+    margin: 0px;
+    padding-top: 5px;
+}
+
+#conteudo #areaConfirmar div:hover{
+    color: rgb(64, 64, 64);
+}
+
+#conteudo #areaConfirmar a:link, a:visited, a:link:active, a:visited:active{
+    text-decoration: none;
+}
+
+#areaImg{
+    width: 100%;
+}
+
+#creditImg{
+    height: 50px;
+    margin: 15px;
+    float: right;
+}
+
+#creditImg img{
+    height: 100%;
+}
