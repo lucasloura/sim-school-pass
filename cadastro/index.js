@@ -315,7 +315,7 @@ function isEmail(emailAdress){
 }
 
 function sair(){
-    window.open('../index.html', '_self');
+    window.open('https://lucasloura.github.io/sim-school-pass/', '_self');
 }
 
 function autoPreencher(){
