@@ -230,7 +230,7 @@ body{
     height: 100%;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 800px){
     #cabecalho #links-empresas{
         display: none;
     }
@@ -259,7 +259,7 @@ body{
         padding: 0;
         margin: 0;
         margin-left: 15;
-        padding-top: 50%;
+        padding-top: 45%;
         height: max-content;
         width: 315px;
     }
