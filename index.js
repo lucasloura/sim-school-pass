@@ -1,9 +1,12 @@
 function alternarExibicaoRegulamento(){
     var x = document.getElementById("sombra");
+    var y = document.getElementById("imgCreditImg");
     if (x.style.display === "none") {
         x.style.display = "block";
+        y.src = "./logos/istock2.png";
     } else {
         x.style.display = "none";
+        y.src = "./logos/istock.png";
     }
 }
 

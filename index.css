@@ -3,9 +3,9 @@ html{
 }
 
 body{
-	font-family: 'Tw Cen MT', Verdana, Geneva, Tahoma, sans-serif; 	
+	font-family: 'Tw Cen MT', Verdana, Geneva, Tahoma, sans-serif;
 	margin:0;
-    background: url("./planos/stock.png");
+    background: url("./planos/stock.png") bottom center no-repeat;;
     background-size: auto 100%;
 }
 
@@ -84,13 +84,13 @@ body{
 
 
 #secaoinicial{
-    display: block;
+    display: relative;
     height: 100%;
 }
 
 #intro {
     display: block;
-    height: 50px;
+    height: auto;
     width: 400px;
     padding-top: 12%;
     padding-left: 7%;
@@ -215,13 +215,81 @@ body{
     border: 1px solid gray;
 }
 
+
+
 #creditImg{
-    position: absolute;
-    bottom: 10px;
-    right: 10;
+    position:absolute;
+    bottom: 5px;
+    right: 5px;
     height: 75px;
+    margin: 15px;
+    float: right;
 }
 
 #creditImg img{
     height: 100%;
+}
+
+@media only screen and (max-width: 600px){
+    #cabecalho #links-empresas{
+        display: none;
+    }
+
+    #cabecalho #cartoes{
+        margin: 0 auto;
+        padding: 0;
+        float: none;
+        width: fit-content;
+        font-size: 15px;
+    }
+
+
+
+    #sombra #area{
+        width: 90%;
+        height: 90%;
+        margin: 3% auto;
+        padding: 10px;
+        background-color: white;
+        text-align: center;
+        border-radius: 35px;
+    }
+
+    #intro{
+        padding: 0;
+        margin: 0;
+        margin-left: 15;
+        padding-top: 50%;
+        height: max-content;
+        width: 315px;
+    }
+
+    #intro #info{
+        padding: 6%;
+        font-size: 14px;
+    }
+
+    #intro #info #areaCpf{
+        margin-bottom: -10px;
+    }
+
+    #intro #info #botoesIntro{
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    #sombra #area #regulamento{
+        background-color: white;
+        border: 2px solid black;
+        height: 68%;
+        width: 90%;
+        border-radius: 25px;
+        margin: 0 auto;
+        padding: 10px;
+        display:flex;
+    }
+
+    #creditImg{
+        display: none;
+    }
 }
