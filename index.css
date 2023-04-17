@@ -257,7 +257,7 @@ body{
     }
 
     #intro{
-        padding-top: 175px;
+        padding-top: 250px;
         padding-left: 7%;
         height: max-content;
         width: 315px;
@@ -289,6 +289,6 @@ body{
     }
 
     #creditImg{
-        display: none;
+        height: 50px;
     }
 }
