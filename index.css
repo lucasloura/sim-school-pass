@@ -92,8 +92,9 @@ body{
     display: block;
     height: auto;
     width: 400px;
-    padding-top: 12%;
+    padding-top: 175px;
     padding-left: 7%;
+    position: fixed;
 }
 
 #intro #info{
@@ -256,10 +257,8 @@ body{
     }
 
     #intro{
-        padding: 0;
-        margin: 0;
-        margin-left: 15;
-        padding-top: 45%;
+        padding-top: 175px;
+        padding-left: 7%;
         height: max-content;
         width: 315px;
     }
