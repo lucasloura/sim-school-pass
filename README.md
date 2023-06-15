@@ -1,5 +1,7 @@
 # SIM School Pass System
 
+  Video about the project: https://youtu.be/-7c5vi-_MUQ
+
   SIM School Pass System is a project developed by me, @Martinelii and @adryellen11santana as college assignment during February-April of 2023. The proposal of the assignment was to apply the concepts of the Project-Based Learning Methodology, using any language and/or platform, to propose a solution to a real-world problem.
 <!--  We chose to focus on the SIM School Pass enroll & re-enroll system as it is a student's right and we believe that simplifying/facilitating this process in order to make it more pratical will leave a positive affect on the community, as well as we having plenty of experience with it as it is part of our daily lives. -->
 
